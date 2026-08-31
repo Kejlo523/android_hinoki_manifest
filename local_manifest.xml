@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
     <remote name="kejlo523" fetch="https://github.com/Kejlo523/" />
+    <remote name="ellosan" fetch="https://github.com/Ellosan/" />
 
+    <remove-project name="LineageOS/android_bootable_recovery" />
     <remove-project name="LineageOS/android_build" />
     <remove-project name="LineageOS/android_external_wpa_supplicant_8" />
     <remove-project name="LineageOS/android_frameworks_av" />
@@ -13,6 +15,7 @@
     <remove-project name="LineageOS/android_system_core" />
     <remove-project name="LineageOS/android_vendor_lineage" />
 
+    <project name="android_bootable_recovery" path="bootable/recovery" remote="ellosan" revision="lineage-17.1" />
     <project name="android_build" path="build/make" remote="kejlo523" revision="lineage-17.1-hinoki" />
     <project name="android_external_wpa_supplicant_8" path="external/wpa_supplicant_8" remote="kejlo523" revision="lineage-17.1-hinoki" />
     <project name="android_frameworks_av" path="frameworks/av" remote="kejlo523" revision="lineage-17.1-hinoki" />
@@ -25,7 +28,7 @@
     <project name="android_vendor_lineage" path="vendor/lineage" remote="kejlo523" revision="lineage-17.1-hinoki" />
 
     <project name="android_device_sony_hinoki" path="device/sony/hinoki" remote="kejlo523" revision="lineage-17.1-hinoki" />
-    <project name="android_device_sony_mt6757-common" path="device/sony/mt6757-common" remote="kejlo523" revision="lineage-17.1-hinoki" />
+    <project name="android_device_sony_mt6757-common" path="device/sony/mt6757-common" remote="ellosan" revision="lineage-17.1-hinoki" />
     <project name="android_kernel_sony_mt6757" path="kernel/sony/mt6757" remote="kejlo523" revision="lineage-17.1-hinoki" />
     <project name="android_vendor_sony_mt6757-common" path="vendor/sony/mt6757-common" remote="kejlo523" revision="lineage-17.1-hinoki" />
 </manifest>

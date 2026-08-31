@@ -1,0 +1,29 @@
+{
+  "name": "LineageOS 17.1 (hinoki)",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+
+  // Codespaces only offers machine types that meet these, so you do not have
+  // to know which tier you are on. 128GB is enough for a shallow source tree
+  // plus a recovery build; it is NOT enough for a full `mka bacon`.
+  "hostRequirements": {
+    "cpus": 16,
+    "memory": "64gb",
+    "storage": "128gb"
+  },
+
+  "onCreateCommand": ".devcontainer/setup.sh",
+
+  "remoteEnv": {
+    "USE_CCACHE": "1",
+    "CCACHE_EXEC": "/usr/bin/ccache",
+    "PATH": "${containerEnv:PATH}:/home/vscode/bin"
+  },
+
+  "customizations": {
+    "vscode": {
+      "extensions": ["ms-vscode.cpptools", "redhat.vscode-xml"]
+    }
+  }
+}
