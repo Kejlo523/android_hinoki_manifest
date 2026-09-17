@@ -10,10 +10,24 @@
     <remove-project name="LineageOS/android_hardware_interfaces" />
     <remove-project name="LineageOS/android_hardware_ril" />
     <remove-project name="LineageOS/android_packages_apps_Snap" />
+    <remove-project name="LineageOS/android_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-4.9" />
+    <remove-project name="LineageOS/android_prebuilts_gcc_linux-x86_arm_arm-linux-androideabi-4.9" />
+    <remove-project name="platform/prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.9" />
+    <remove-project name="LineageOS/android_system_ca-certificates" />
     <remove-project name="LineageOS/android_system_core" />
+    <remove-project name="LineageOS/android_system_extras" />
+    <remove-project name="LineageOS/android_system_sepolicy" />
     <remove-project name="LineageOS/android_vendor_lineage" />
 
-    <project name="android_build" path="build/make" remote="kejlo523" revision="lineage-17.1-hinoki" />
+    <project name="android_build" path="build/make" remote="kejlo523" revision="lineage-17.1-hinoki">
+        <copyfile src="core/root.mk" dest="Makefile" />
+        <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+        <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+        <linkfile src="core" dest="build/core" />
+        <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+        <linkfile src="target" dest="build/target" />
+        <linkfile src="tools" dest="build/tools" />
+    </project>
     <project name="android_external_wpa_supplicant_8" path="external/wpa_supplicant_8" remote="kejlo523" revision="lineage-17.1-hinoki" />
     <project name="android_frameworks_av" path="frameworks/av" remote="kejlo523" revision="lineage-17.1-hinoki" />
     <project name="android_frameworks_base" path="frameworks/base" remote="kejlo523" revision="lineage-17.1-hinoki" />
@@ -21,7 +35,13 @@
     <project name="android_hardware_interfaces" path="hardware/interfaces" remote="kejlo523" revision="lineage-17.1-hinoki" />
     <project name="android_hardware_ril" path="hardware/ril" remote="kejlo523" revision="lineage-17.1-hinoki" />
     <project name="android_packages_apps_Snap" path="packages/apps/Snap" remote="kejlo523" revision="lineage-17.1-hinoki" />
+    <project name="android_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-4.9" path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" remote="kejlo523" revision="lineage-17.1-hinoki" />
+    <project name="android_prebuilts_gcc_linux-x86_arm_arm-linux-androideabi-4.9" path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" remote="kejlo523" revision="lineage-17.1-hinoki" />
+    <project name="android_prebuilts_gcc_linux-x86_x86_x86_64-linux-android-4.9" path="prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.9" remote="kejlo523" revision="lineage-17.1-hinoki" />
+    <project name="android_system_ca-certificates" path="system/ca-certificates" remote="kejlo523" revision="lineage-17.1-hinoki" />
     <project name="android_system_core" path="system/core" remote="kejlo523" revision="lineage-17.1-hinoki" />
+    <project name="android_system_extras" path="system/extras" remote="kejlo523" revision="lineage-17.1-hinoki" />
+    <project name="android_system_sepolicy" path="system/sepolicy" remote="kejlo523" revision="lineage-17.1-hinoki" />
     <project name="android_vendor_lineage" path="vendor/lineage" remote="kejlo523" revision="lineage-17.1-hinoki" />
 
     <project name="android_device_sony_hinoki" path="device/sony/hinoki" remote="kejlo523" revision="lineage-17.1-hinoki" />

@@ -22,7 +22,7 @@ mka bacon
 The flashable ZIP is written to `out/target/product/hinoki/`.
 
 Use `local_manifest-pinned.xml` instead of `local_manifest.xml` when you need
-the exact revisions used for the 2026-08-28 build.
+the exact revisions used for the 2026-09-17 V23 build.
 
 ## Device baseline
 
@@ -30,7 +30,7 @@ the exact revisions used for the 2026-08-28 build.
 - Required stock firmware baseline: `48.1.A.2.112`
 - Android: 10 / LineageOS 17.1
 - Kernel: [android_kernel_sony_mt6757](https://github.com/Kejlo523/android_kernel_sony_mt6757/tree/lineage-17.1-hinoki)
-- Build-specific kernel commit: [`957d36ac`](https://github.com/Kejlo523/android_kernel_sony_mt6757/commit/957d36ac)
+- Build-specific kernel commit: [`7d74b285`](https://github.com/Kejlo523/android_kernel_sony_mt6757/commit/7d74b28506bdaf4c025b602b6a50ad58f017ed5a)
 - Google apps are not included.
 
 ## Current compatibility notes
@@ -48,7 +48,9 @@ storage, Wi-Fi, HWC and media used by the current ROM.
   the parallel NXP extension HAL are disabled to avoid controller hangs.
 - The device currently uses the primary SIM path; dual-SIM behavior remains
   incomplete.
-- SELinux is permissive.
+- SELinux is enforcing with the legacy MediaTek vendor domains restored.
+- Device Info HW, Kernel Adiutor, DuckDuckGo and an app-scoped `su`/BusyBox
+  environment are included as system components.
 
 Contributions and device logs attached to reproducible bug reports are
 welcome.
