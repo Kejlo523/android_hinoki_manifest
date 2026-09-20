@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Exact source revisions used for the 2026-09-17 V23 build. -->
+<!-- Exact source revisions used for the 2026-09-20 V25 build. -->
 <manifest>
     <remote name="kejlo523" fetch="https://github.com/Kejlo523/" />
 
@@ -46,7 +46,7 @@
     <project name="android_vendor_lineage" path="vendor/lineage" remote="kejlo523" revision="774aba4bd7021da80291d99b40279881f6117630" />
 
     <project name="android_device_sony_hinoki" path="device/sony/hinoki" remote="kejlo523" revision="8fa5aa75b9fff5a7f9b49475fbe33e5b914bc1a9" />
-    <project name="android_device_sony_mt6757-common" path="device/sony/mt6757-common" remote="kejlo523" revision="6a882125a17f6f98fe1696ffea41d502b709534d" />
+    <project name="android_device_sony_mt6757-common" path="device/sony/mt6757-common" remote="kejlo523" revision="484299e0b71872ffb51ce2f864023b4364652995" />
     <project name="android_kernel_sony_mt6757" path="kernel/sony/mt6757" remote="kejlo523" revision="7d74b28506bdaf4c025b602b6a50ad58f017ed5a" />
-    <project name="android_vendor_sony_mt6757-common" path="vendor/sony/mt6757-common" remote="kejlo523" revision="0b9b308c067ca1f46142dbef8e495635c18775d0" />
+    <project name="android_vendor_sony_mt6757-common" path="vendor/sony/mt6757-common" remote="kejlo523" revision="b7e69562334cfbc43bae5c6e4f1885ead3aa3a81" />
 </manifest>
