@@ -21,8 +21,23 @@ mka bacon
 
 The flashable ZIP is written to `out/target/product/hinoki/`.
 
+For a release signed with your own keys, use the checked-in wrapper after the
+build (paths below are examples):
+
+```bash
+bash tools/sign-release.sh /path/to/lineage \
+    /path/to/lineage/out/target/product/hinoki/obj/PACKAGING/target_files_intermediates/lineage_hinoki-target_files-eng.user.zip \
+    /path/to/private-keys /path/to/ROM/lineage-hinoki-release.zip
+```
+
+The wrapper replaces the OTA/recovery verification certificates, signs platform
+and NetworkStack packages, and explicitly enables `addon.d` backup/restore.
+Installed GApps with their own `addon.d` script therefore survive an in-place
+update. This does not restore Google apps after formatting system/data. Keep
+private keys outside Git and use the same keys for subsequent releases.
+
 Use `local_manifest-pinned.xml` instead of `local_manifest.xml` when you need
-the exact revisions used for the 2026-09-17 V23 build.
+the exact revisions used for the 2026-09-20 V26 build.
 
 ## Device baseline
 
@@ -49,6 +64,11 @@ storage, Wi-Fi, HWC and media used by the current ROM.
 - The device currently uses the primary SIM path; dual-SIM behavior remains
   incomplete.
 - SELinux is enforcing with the legacy MediaTek vendor domains restored.
+- GNSS data directories are created by platform init after a data wipe. The
+  legacy AGPS BIO callbacks are adapted to Android 10 BoringSSL, and the GNSS
+  shutdown compatibility preload remains active under enforcing SELinux.
+- Satellite fixes and SUPL assistance have been verified on the device. Full
+  battery endurance still requires an unplugged idle test.
 - Device Info HW, Kernel Adiutor, DuckDuckGo and an app-scoped `su`/BusyBox
   environment are included as system components.
 
