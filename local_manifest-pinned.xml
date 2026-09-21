@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Exact source revisions used for the 2026-09-20 V26 build. -->
+<!-- Device-specific source revisions used for the 2026-09-21 V27 build. -->
 <manifest>
     <remote name="kejlo523" fetch="https://github.com/Kejlo523/" />
 
@@ -20,7 +20,7 @@
     <remove-project name="LineageOS/android_system_sepolicy" />
     <remove-project name="LineageOS/android_vendor_lineage" />
 
-    <project name="android_build" path="build/make" remote="kejlo523" revision="dd88b39f22d382562a268a64afdb38f9cf0dbc7e">
+    <project name="android_build" path="build/make" remote="kejlo523" revision="052bd7e368459334187d9d0af469c819bffb7eb2">
         <copyfile src="core/root.mk" dest="Makefile" />
         <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
         <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
@@ -40,13 +40,13 @@
     <project name="android_prebuilts_gcc_linux-x86_arm_arm-linux-androideabi-4.9" path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" remote="kejlo523" revision="fb606bbf1704f948a3af31766123cb5d877186ba" />
     <project name="android_prebuilts_gcc_linux-x86_x86_x86_64-linux-android-4.9" path="prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.9" remote="kejlo523" revision="1d8e5847316525d5a645f5b40f97fff0e5dd46f3" />
     <project name="android_system_ca-certificates" path="system/ca-certificates" remote="kejlo523" revision="94a4a6dd9e5ea086c7ce327ebdeea28438e3ab5b" />
-    <project name="android_system_core" path="system/core" remote="kejlo523" revision="3640887af7a75954dcc5b9a6704f703853e1e0ae" />
+    <project name="android_system_core" path="system/core" remote="kejlo523" revision="79c315140f50dd311c6bc934c8c2b4e7dfa2aaf7" />
     <project name="android_system_extras" path="system/extras" remote="kejlo523" revision="d2b2ad62f3aebf016a09e631ec4b934efa479270" />
     <project name="android_system_sepolicy" path="system/sepolicy" remote="kejlo523" revision="3fa3d1e4472171c6ecc32342e27e318438ad6f77" />
     <project name="android_vendor_lineage" path="vendor/lineage" remote="kejlo523" revision="774aba4bd7021da80291d99b40279881f6117630" />
 
     <project name="android_device_sony_hinoki" path="device/sony/hinoki" remote="kejlo523" revision="8fa5aa75b9fff5a7f9b49475fbe33e5b914bc1a9" />
-    <project name="android_device_sony_mt6757-common" path="device/sony/mt6757-common" remote="kejlo523" revision="ea236d9cee5487af80126aba2a29dc48b8a0abbd" />
+    <project name="android_device_sony_mt6757-common" path="device/sony/mt6757-common" remote="kejlo523" revision="489af7e3004c2a2441eddbd394d653c6fc04a934" />
     <project name="android_kernel_sony_mt6757" path="kernel/sony/mt6757" remote="kejlo523" revision="7d74b28506bdaf4c025b602b6a50ad58f017ed5a" />
     <project name="android_vendor_sony_mt6757-common" path="vendor/sony/mt6757-common" remote="kejlo523" revision="aec41b19273406382927af8ca4fcf283997ec7c8" />
 </manifest>
